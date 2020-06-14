@@ -1,0 +1,43 @@
+# a lot of this configuration came from this incredibly helpful article 
+# https://blog.scottnonnenberg.com/better-git-configuration/
+
+[core]
+  pager = bat
+  editor = vim
+
+[user]
+  email = alexhendriebielen@gmail.com 
+  name = Alex Hendrie Bielen
+
+[alias]
+  co = checkout
+
+  amend = commit --amend
+  stash-all = stash save --include-untracked
+  graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  deps  = submodule update --remote --rebase
+
+[commit]
+  template = ~/.config/git/commit-template
+  # gpgSign = true 
+  
+[merge]
+  # to support the rebase-style workflow : ) 
+  ff = only
+
+[push]
+  default = simple
+  followTags = true
+
+[status]
+  showUntrackedFiles = all
+
+[diff]
+  tool = icdiff
+
+[difftool]
+  prompt = false
+
+[difftool "icdiff"]
+  cmd = icdiff --line-numbers $LOCAL $REMOTE
+
