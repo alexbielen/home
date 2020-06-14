@@ -4,4 +4,6 @@ fisher/
 /fish/*/*
 
 !/fish/myfunctions/*
+!/fish/mycompletions/*
+
 nvim/.netrwhist

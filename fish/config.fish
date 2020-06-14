@@ -11,5 +11,8 @@ set -x SHELL (which fish)
 # add myfunctions to function path
 set fish_function_path $HOME/.config/fish/myfunctions $fish_function_path
 
+# add mycompletions to completion path
+set fish_complete_path $XDG_CONFIG_HOME/fish/mycompletions $fish_complete_path
+
 # set vi key bindings 
 fish_vi_key_bindings
