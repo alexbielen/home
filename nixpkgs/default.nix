@@ -21,6 +21,7 @@ let
           pkgs.jq
           pkgs.less
           pkgs.lorri
+	  pkgs.neofetch
           pkgs.neovim
           pkgs.ripgrep
           pkgs.tree
