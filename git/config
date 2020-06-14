@@ -10,8 +10,8 @@
   name = Alex Hendrie Bielen
 
 [alias]
+  ls = log --oneline
   co = checkout
-
   amend = commit --amend
   stash-all = stash save --include-untracked
   graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
@@ -20,6 +20,9 @@
 [commit]
   template = ~/.config/git/commit-template
   # gpgSign = true 
+
+[init]
+  templatedir = ~/.config/git/init-template
   
 [merge]
   # to support the rebase-style workflow : ) 

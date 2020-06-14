@@ -14,6 +14,7 @@ let
           pkgs.fish
           pkgs.fzf
           pkgs.git
+	  pkgs.git-secrets
           pkgs.gnupg
           pkgs.htop
           pkgs.icdiff

@@ -3,6 +3,5 @@ fisher/
 # don't version control fish scripts that I haven't written
 /fish/*/*
 
-# do version control fish scripts that start with bielen_
-# this is usually a sign that I wrote that myself.
-!/fish/*/bielen_*
+!/fish/myfunctions/*
+nvim/.netrwhist
