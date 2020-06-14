@@ -4,6 +4,10 @@ bass source $HOME/.nix-profile/etc/profile.d/nix.sh
 # set XDG_CONFIG_HOME
 set -x XDG_CONFIG_HOME $HOME/.config
 
+# set the SHELL variable 
+# TODO: I'm not sure why this isn't set at login so I'll need to look into that.
+set -x SHELL (which fish)
+
 # add myfunctions to function path
 set fish_function_path $HOME/.config/fish/myfunctions $fish_function_path
 
