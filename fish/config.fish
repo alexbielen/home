@@ -33,4 +33,5 @@ end
 # note: this has to go after fisher setup because we're using bass.
 bass source $HOME/.nix-profile/etc/profile.d/nix.sh
 
-
+# set pure prompt to lambda symbol
+set -g pure_symbol_prompt "λ"
