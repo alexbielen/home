@@ -14,14 +14,14 @@ let
           pkgs.fish
           pkgs.fzf
           pkgs.git
-	  pkgs.git-secrets
+          pkgs.git-secrets
           pkgs.gnupg
           pkgs.htop
           pkgs.icdiff
           pkgs.jq
           pkgs.less
           pkgs.lorri
-	  pkgs.neofetch
+          pkgs.neofetch
           pkgs.neovim
           pkgs.ripgrep
           pkgs.tree
