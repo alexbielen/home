@@ -1,2 +1,2 @@
 #!/Users/alexbielen/.nix-profile/bin/fish
-git secrets --pre_commit_hook -- "$@"
+git secrets --pre_commit_hook -- "$argv"

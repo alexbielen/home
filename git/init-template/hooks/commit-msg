@@ -1,2 +1,2 @@
-#!/Users/alexbielen/bin/fish
-git secrets --commit_msg_hook -- "$@"
+#!/Users/alexbielen/.nix-profile/bin/fish
+git secrets --commit_msg_hook -- "$argv"
