@@ -96,3 +96,5 @@ set -g pure_color_prompt_on_success $nord15
 set dircolors_file $XDG_CONFIG_HOME/dircolors/.dircolors
 test -r $dircolors_file && eval (gdircolors -c $dircolors_file)
 
+# set bat theme
+set -x BAT_THEME "Nord"
