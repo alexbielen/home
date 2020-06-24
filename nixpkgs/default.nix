@@ -24,6 +24,7 @@ let
           pkgs.neofetch
           pkgs.neovim
           pkgs.ripgrep
+          pkgs.rustup
           pkgs.tree
           pkgs.vscode
           pkgs.which
