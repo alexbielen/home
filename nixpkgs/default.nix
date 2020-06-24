@@ -7,6 +7,7 @@ let
       [
           pkgs.alacritty
           pkgs.bat
+          pkgs.cacert
           pkgs.curl
           pkgs.coreutils-prefixed
           pkgs.emacs
@@ -23,6 +24,7 @@ let
           pkgs.lorri
           pkgs.neofetch
           pkgs.neovim
+          pkgs.nix
           pkgs.ripgrep
           pkgs.rustup
           pkgs.tree
