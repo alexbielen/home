@@ -6,4 +6,14 @@ fisher/
 !/fish/myfunctions/*
 !/fish/mycompletions/*
 
+# linters 
+.mypy_cache
+
+
+# editors
 nvim/.netrwhist
+.vscode
+
+
+
+
