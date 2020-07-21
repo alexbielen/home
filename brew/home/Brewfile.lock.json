@@ -1,0 +1,32 @@
+{
+  "entries": {
+    "tap": {
+      "daviderestivo/emacs-head": {
+        "revision": "68e7dd6dd59e1859576b70c146d6a246487c6dfb"
+      }
+    },
+    "brew": {
+      "emacs-head@28": {
+        "version": "28.0.50_1",
+        "bottle": false,
+        "options": {
+          "args": [
+            "with-cocoa"
+          ]
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "catalina": {
+        "HOMEBREW_VERSION": "2.4.8",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "026cafed7c0dcb02ee116ecf14fa5e28153a760b",
+        "CLT": "1103.0.32.29",
+        "Xcode": "11.6",
+        "macOS": "10.15.5"
+      }
+    }
+  }
+}

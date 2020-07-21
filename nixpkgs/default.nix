@@ -5,35 +5,34 @@ with { pkgs = import <nixpkgs> {}; };
 let 
     bielenShell = with pkgs;
       [
-          pkgs.alacritty
-          pkgs.bat
-          pkgs.cacert
-          pkgs.curl
-          pkgs.coreutils-prefixed
-	  pkgs.direnv
-          pkgs.emacs
-          pkgs.fd
-          pkgs.fish
-          pkgs.fzf
-          pkgs.git
-          pkgs.git-secrets
-          pkgs.gnupg
-          pkgs.htop
-	  pkgs.hugo
-          pkgs.icdiff
-          pkgs.jq
-          pkgs.less
-          pkgs.lorri
-          pkgs.neofetch
-          pkgs.neovim
-          pkgs.nix
-          pkgs.ripgrep
-          pkgs.rustup
-          pkgs.tree
-          pkgs.vscode
-          pkgs.which
-          pkgs.xclip
-          pkgs.xz
+        pkgs.alacritty
+        pkgs.bat
+        pkgs.cacert
+        pkgs.curl
+        pkgs.coreutils-prefixed
+        pkgs.direnv
+        pkgs.fd
+        pkgs.fish
+        pkgs.fzf
+        pkgs.git
+        pkgs.git-secrets
+        pkgs.gnupg
+        pkgs.htop
+        pkgs.hugo
+        pkgs.icdiff
+        pkgs.jq
+        pkgs.less
+        pkgs.lorri
+        pkgs.neofetch
+        pkgs.neovim
+        pkgs.nix
+        pkgs.ripgrep
+        pkgs.rustup
+        pkgs.tree
+        pkgs.vscode
+        pkgs.which
+        pkgs.xclip
+        pkgs.xz
       ];
 
 in 

@@ -98,3 +98,8 @@ test -r $dircolors_file && eval (gdircolors -c $dircolors_file)
 
 # set bat theme
 set -x BAT_THEME "Nord"
+
+# add doom emacs to path 
+set -g PATH $PATH $XDG_CONFIG_HOME/emacs/bin
+
+

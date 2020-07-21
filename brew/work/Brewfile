@@ -1,0 +1,28 @@
+# emacs setup
+tap "daviderestivo/emacs-head"
+brew "emacs-head@28", args: ["with-cocoa"]
+
+# brew packages
+brew "bat"
+brew "curl"
+brew "coreutils"
+brew "fd"
+brew "fish"
+brew "fzf"
+brew "git"
+brew "git-secrets"
+brew "gnupg"
+brew "htop"
+brew "icdiff"
+brew "jq"
+brew "less"
+brew "neofetch"
+brew "neovim"
+brew "ripgrep"
+brew "rustup"
+brew "tree"
+
+# casks
+# cask "alacritty"
+# see README for how to install alacritty.
+cask "visual-studio-code"

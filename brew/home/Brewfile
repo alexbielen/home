@@ -1,0 +1,3 @@
+# emacs setup
+tap "daviderestivo/emacs-head"
+brew "emacs-head@28", args: ["with-cocoa"]
