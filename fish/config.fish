@@ -29,6 +29,21 @@ if not functions -q fisher
 end
 
 
+### Home machine specific setup goes here
+if not set -q WORK_MACHINE
+    ## Nix
+    # source the nix environment variables and prepend nix bin directory to the $PATH
+    bass source $HOME/.nix-profile/etc/profile.d/nix.sh
+end
+
+
+##  WORK_MACHINE specific setup goes here
+if set -q WORK_MACHINE
+    # pyenv
+    pyenv init - | source
+end
+
+
 
 # set pure prompt to lambda symbol
 set -g pure_symbol_prompt "λ"
@@ -98,20 +113,3 @@ set -x BAT_THEME "Nord"
 
 # add doom emacs to path 
 set -g PATH $PATH $XDG_CONFIG_HOME/emacs/bin
-
-
-### Home machine specific setup goes here
-if not set -q WORK_MACHINE
-    ## Nix
-    # source the nix environment variables and prepend nix bin directory to the $PATH
-    bass source $HOME/.nix-profile/etc/profile.d/nix.sh
-end
-
-
-##  WORK_MACHINE specific setup goes here
-if set -q WORK_MACHINE
-    # pyenv
-    pyenv init - | source
-end
-
-
