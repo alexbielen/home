@@ -10,6 +10,7 @@ let
           pkgs.cacert
           pkgs.curl
           pkgs.coreutils-prefixed
+	  pkgs.direnv
           pkgs.emacs
           pkgs.fd
           pkgs.fish
@@ -18,6 +19,7 @@ let
           pkgs.git-secrets
           pkgs.gnupg
           pkgs.htop
+	  pkgs.hugo
           pkgs.icdiff
           pkgs.jq
           pkgs.less
