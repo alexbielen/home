@@ -16,6 +16,7 @@
   stash-all = stash save --include-untracked
   graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   deps  = submodule update --remote --rebase
+  forget = rm --cached
 
 [commit]
   template = ~/.config/git/commit-template

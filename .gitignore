@@ -2,6 +2,7 @@ fisher/
 
 # don't version control fish scripts that I haven't written
 /fish/*/*
+/fish/fish_variables
 
 !/fish/myfunctions/*
 !/fish/mycompletions/*
