@@ -21,6 +21,7 @@ brew "neovim"
 brew "ripgrep"
 brew "rustup"
 brew "tree"
+brew "wget"
 
 # casks
 # cask "alacritty"
