@@ -3,6 +3,9 @@
     "tap": {
       "daviderestivo/emacs-head": {
         "revision": "68e7dd6dd59e1859576b70c146d6a246487c6dfb"
+      },
+      "cloudfoundry/tap": {
+        "revision": "664ddfeaceda020b725e07b06243b9a7fec20e0f"
       }
     },
     "brew": {
@@ -392,6 +395,10 @@
             }
           }
         }
+      },
+      "cf-cli": {
+        "version": "6.51.0",
+        "bottle": false
       }
     },
     "cask": {

@@ -2,6 +2,10 @@
 tap "daviderestivo/emacs-head"
 brew "emacs-head@28", args: ["with-cocoa"]
 
+# cloudfoundry setup
+tap 'cloudfoundry/homebrew-tap'
+brew "cf-cli"
+
 # brew packages
 brew "bat"
 brew "curl"
