@@ -26,6 +26,8 @@ let
         pkgs.neofetch
         pkgs.neovim
         pkgs.nix
+	pkgs.python38
+	pkgs.poetry
         pkgs.ripgrep
         pkgs.rustup
         pkgs.tree

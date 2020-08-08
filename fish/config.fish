@@ -113,3 +113,6 @@ set -x BAT_THEME "Nord"
 
 # add doom emacs to path 
 set -g PATH $PATH $XDG_CONFIG_HOME/emacs/bin
+
+# disable virtual env prompt
+set -x VIRTUAL_ENV_DISABLE_PROMPT 1
