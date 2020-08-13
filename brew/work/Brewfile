@@ -8,6 +8,7 @@ brew "cf-cli"
 
 # brew packages
 brew "bat"
+brew "circleci"
 brew "curl"
 brew "coreutils"
 brew "fd"
@@ -26,6 +27,7 @@ brew "ripgrep"
 brew "rustup"
 brew "tree"
 brew "wget"
+brew "netcat"
 
 # casks
 # cask "alacritty"
