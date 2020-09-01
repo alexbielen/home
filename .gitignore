@@ -7,6 +7,9 @@ fisher/
 !/fish/myfunctions/*
 !/fish/mycompletions/*
 
+# nvm
+nvm/
+
 # linters 
 .mypy_cache
 

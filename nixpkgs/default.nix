@@ -30,6 +30,7 @@ let
 	pkgs.poetry
         pkgs.ripgrep
         pkgs.rustup
+	pkgs.shellcheck
         pkgs.tree
         pkgs.vscode
         pkgs.which
