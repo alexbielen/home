@@ -29,6 +29,9 @@
   # to support the rebase-style workflow : ) 
   ff = only
 
+[pull]
+  ff = only
+
 [push]
   default = simple
   followTags = true
