@@ -470,6 +470,27 @@
             }
           }
         }
+      },
+      "xsv": {
+        "version": "0.13.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/xsv-0.13.0.catalina.bottle.2.tar.gz",
+              "sha256": "b077e2fd6f968d6a3fa5c22a145e134bcead5cbe50ff20c78495937cbee7ea1d"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/xsv-0.13.0.mojave.bottle.2.tar.gz",
+              "sha256": "ade2c436c1acf011ef7807b01a2783f6c31c0cacf066e51db904adefd99d4a14"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/xsv-0.13.0.high_sierra.bottle.2.tar.gz",
+              "sha256": "557ef267b773911347df0d1960040f2d28e20c3680637b8af5bd89edc77bcce2"
+            }
+          }
+        }
       }
     },
     "cask": {
