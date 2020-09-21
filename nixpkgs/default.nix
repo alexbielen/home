@@ -31,6 +31,7 @@ let
         pkgs.ripgrep
         pkgs.rustup
 	pkgs.shellcheck
+	pkgs.tmux
         pkgs.tree
         pkgs.vscode
         pkgs.which
