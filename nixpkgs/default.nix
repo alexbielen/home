@@ -7,6 +7,7 @@ let
       [
         pkgs.alacritty
         pkgs.bat
+	pkgs.cabal-install
         pkgs.cacert
         pkgs.curl
         pkgs.coreutils-prefixed
@@ -26,6 +27,7 @@ let
         pkgs.neofetch
         pkgs.neovim
         pkgs.nix
+        pkgs.nodejs-14_x
 	pkgs.python38
 	pkgs.poetry
         pkgs.ripgrep
