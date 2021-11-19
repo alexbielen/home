@@ -116,3 +116,6 @@ set -g PATH $PATH $XDG_CONFIG_HOME/emacs/bin
 
 # disable virtual env prompt
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
+
+# when in a nix-shell keep the same shell set up.
+any-nix-shell fish --info-right | source

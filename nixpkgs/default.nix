@@ -6,6 +6,7 @@ let
     bielenShell = with pkgs;
       [
         pkgs.alacritty
+        pkgs.any-nix-shell
         pkgs.bat
 	pkgs.cabal-install
         pkgs.cacert
@@ -28,17 +29,18 @@ let
         pkgs.neovim
         pkgs.nix
         pkgs.nodejs-14_x
-	pkgs.python38
+	pkgs.python310
 	pkgs.poetry
-        pkgs.ripgrep
+	pkgs.ripgrep
         pkgs.rustup
 	pkgs.shellcheck
 	pkgs.tmux
         pkgs.tree
-        pkgs.vscode
         pkgs.which
+	pkgs.vscode
         pkgs.xclip
         pkgs.xz
+
       ];
 
 in 
