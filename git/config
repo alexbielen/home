@@ -24,6 +24,7 @@
 
 [init]
   templatedir = ~/.config/git/init-template
+  defaultBranch = main
   
 [merge]
   # to support the rebase-style workflow : ) 
