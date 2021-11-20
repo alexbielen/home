@@ -12,9 +12,11 @@ let
         pkgs.cacert
         pkgs.curl
         pkgs.coreutils-prefixed
+        pkgs.cowsay
         pkgs.direnv
         pkgs.fd
         pkgs.fish
+        pkgs.fortune
         pkgs.fzf
         pkgs.git
         pkgs.git-secrets
