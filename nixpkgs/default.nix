@@ -32,7 +32,6 @@ let
         pkgs.nix
         pkgs.nodejs-14_x
 	pkgs.python310
-	pkgs.poetry
 	pkgs.ripgrep
         pkgs.rustup
 	pkgs.shellcheck
