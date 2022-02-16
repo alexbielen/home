@@ -37,11 +37,11 @@ let
 	pkgs.shellcheck
 	pkgs.tmux
         pkgs.tree
+	pkgs.wget
         pkgs.which
 	pkgs.vscode
         pkgs.xclip
         pkgs.xz
-
       ];
 
 in 
