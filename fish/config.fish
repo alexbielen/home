@@ -117,5 +117,8 @@ set -g PATH $PATH $XDG_CONFIG_HOME/emacs/bin
 # disable virtual env prompt
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
+# this looks necessary to get the pin entry working for GPG
+set -x GPG_TTY (tty)
+
 # when in a nix-shell keep the same shell set up.
 any-nix-shell fish | source

@@ -8,6 +8,7 @@
 [user]
   email = alexhendriebielen@gmail.com 
   name = Alex Hendrie Bielen
+  signingkey = 22EFC5722144E834
 
 [alias]
   ls = log --oneline
@@ -20,7 +21,10 @@
 
 [commit]
   template = ~/.config/git/commit-template
-  # gpgSign = true 
+  gpgSign = true 
+
+[gpg]
+  program = gpg2 
 
 [init]
   templatedir = ~/.config/git/init-template
