@@ -24,7 +24,7 @@
       nix.settings.experimental-features = "nix-command flakes";
 
       # Enable alternative shell support in nix-darwin.
-      # programs.fish.enable = true;
+      programs.fish.enable = true;
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -36,10 +36,16 @@
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
 
+      # fonts
+      fonts.packages = [
+	pkgs.nerd-fonts.hack
+      ];
+
       users.users."alexbielen" = {
 	home = "/Users/alexbielen";
 	description = "alexbielen";
-};
+	shell = pkgs.fish;
+	};
     };
 	homeconfig = {pkgs, ...}: {
 	    # this is internal compatibility configuration 
@@ -47,6 +53,7 @@
 	    home.stateVersion = "23.05";
 	    # Let home-manager install and manage itself.
 	    programs.home-manager.enable = true;
+	    programs.fish.enable = true;
 
 	    home.packages = with pkgs; [
 		pkgs.vim
@@ -56,6 +63,7 @@
 		pkgs.bat
 		pkgs.neovim
 		pkgs.icdiff
+		pkgs.fish
 	    ];
 
 	    home.sessionVariables = {
@@ -64,6 +72,7 @@
 
 	    home.file = {
 	    	".vimrc".source = ./application-config/vim-config;
+		".config/alacritty/alacritty.toml".source = ./application-config/alacritty.toml;
 	    };
 
 	    programs.git = {
