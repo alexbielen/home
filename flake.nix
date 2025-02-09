@@ -86,19 +86,11 @@
             ".vimrc".source = ./application-config/vim-config;
             ".config/alacritty/alacritty.toml".source = ./application-config/alacritty.toml;
 	    ".config/bat/config".source = ./application-config/bat-config;
+            ".config/git/commit-template".source = ./application-config/git/commit-template;
           };
 
-
-          programs.git = {
-            enable = true;
-            userName = "Alex Bielen";
-            userEmail = "alexhendriebielen@gmail.com";
-            ignores = [ ".DS_Store" ];
-            extraConfig = {
-              init.defaultBranch = "main";
-              push.autoSetupRemote = true;
-            };
-          };
+	  # Not sure if this will be a problem but if so read this https://ayats.org/blog/dont-use-import
+          programs.git = import ./application-config/git/git-config.nix;
         };
     in
     {
