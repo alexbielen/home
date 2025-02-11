@@ -50,3 +50,9 @@ working_directory = "None"
 [terminal.shell]
 args = ["--login"]
 program = "/etc/profiles/per-user/alexbielen/bin/fish"
+
+[window]
+blur = true
+decorations = "Buttonless"
+opacity = 0.8
+
