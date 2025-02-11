@@ -71,6 +71,7 @@
           home.packages = with pkgs; [
             pkgs.alacritty
             pkgs.bat
+            pkgs.coreutils-prefixed
             pkgs.fish
             pkgs.gh
             pkgs.icdiff

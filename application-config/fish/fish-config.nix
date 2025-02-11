@@ -18,6 +18,16 @@
     ];
     functions = {
       gitignore = "curl -sL https://www.gitignore.io/api/$argv";
+      l = {
+        body = ''
+          if not type -q gls
+            ls -laQ $argv
+          else
+            gls -la --group-directories-first --human-readable --time-style=long-iso --color=auto $argv
+          end
+        '';
+         description = "a better, shorter, more colorful ls";
+      };
     };
   };
 }
