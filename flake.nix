@@ -63,9 +63,11 @@
           # Let home-manager install and manage itself.
           programs.home-manager.enable = true;
 
-          # fish configurations
-          programs.fish.enable = true;
+	  imports = [ 
+	    ./application-config/fish/fish-config.nix # fish configuration
+          ];
 
+	  # universally available packages
           home.packages = with pkgs; [
             pkgs.alacritty
             pkgs.bat
