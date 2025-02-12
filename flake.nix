@@ -63,11 +63,11 @@
           # Let home-manager install and manage itself.
           programs.home-manager.enable = true;
 
-	  imports = [ 
-	    ./application-config/fish/fish-config.nix # fish configuration
+          imports = [
+            ./application-config/fish/fish-config.nix # fish configuration
           ];
 
-	  # universally available packages
+          # universally available packages
           home.packages = with pkgs; [
             pkgs.alacritty
             pkgs.bat
@@ -86,14 +86,14 @@
           };
 
           home.file = {
-	    ".config/bat/config".source = ./application-config/bat-config;
-	    ".config/dircolors/.dircolors".source = ./application-config/dircolors-config;
+            ".config/bat/config".source = ./application-config/bat-config;
+            ".config/dircolors/.dircolors".source = ./application-config/dircolors-config;
             ".config/alacritty/alacritty.toml".source = ./application-config/alacritty.toml;
             ".config/git/commit-template".source = ./application-config/git/commit-template;
             ".vimrc".source = ./application-config/vim-config;
           };
 
-	  # Not sure if this will be a problem but if so read this https://ayats.org/blog/dont-use-import
+          # Not sure if this will be a problem but if so read this https://ayats.org/blog/dont-use-import
           programs.git = import ./application-config/git/git-config.nix;
         };
     in
