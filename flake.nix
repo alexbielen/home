@@ -86,10 +86,11 @@
           };
 
           home.file = {
-            ".vimrc".source = ./application-config/vim-config;
-            ".config/alacritty/alacritty.toml".source = ./application-config/alacritty.toml;
 	    ".config/bat/config".source = ./application-config/bat-config;
+	    ".config/dircolors/.dircolors".source = ./application-config/dircolors-config;
+            ".config/alacritty/alacritty.toml".source = ./application-config/alacritty.toml;
             ".config/git/commit-template".source = ./application-config/git/commit-template;
+            ".vimrc".source = ./application-config/vim-config;
           };
 
 	  # Not sure if this will be a problem but if so read this https://ayats.org/blog/dont-use-import
