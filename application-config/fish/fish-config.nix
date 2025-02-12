@@ -4,6 +4,9 @@
 
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
+      
+      # set tide prompt icon
+      set -Ux tide_character_icon 'λ'
     '';
     plugins = [
       {
