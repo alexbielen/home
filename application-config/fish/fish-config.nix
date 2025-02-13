@@ -31,6 +31,13 @@
         '';
          description = "a better, shorter, more colorful ls";
       };
+      # astrology function
+      astro = {
+        body = ''
+	curl -s "https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?day=TODAY&sign="$argv  | jq ".data.horoscope_data" | cowsay
+	'';
+	description = "Enter your star sign for a daily horoscope.";
+      };
     };
   };
 }

@@ -72,12 +72,14 @@
             pkgs.alacritty
             pkgs.bat
             pkgs.coreutils-prefixed
+	    pkgs.cowsay
             pkgs.fish
             pkgs.gh
             pkgs.icdiff
             pkgs.neofetch
             pkgs.neovim
             pkgs.nixfmt-rfc-style
+	    pkgs.ponysay
             pkgs.vim
           ];
 
