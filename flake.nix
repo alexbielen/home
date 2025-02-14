@@ -1,5 +1,5 @@
 {
-  description = "Example nix-darwin system flake";
+  description = "Alex Bielen's system configuration.";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs?rev=d2faa1bbca1b1e4962ce7373c5b0879e5b12cef2";
@@ -11,6 +11,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+    };
+    mac-app-util = {
+      url = "github:hraban/mac-app-util";
+    };
   };
 
   outputs =
@@ -19,6 +25,8 @@
       nix-darwin,
       nixpkgs,
       home-manager,
+      nix-vscode-extensions,
+      mac-app-util
     }:
     let
       configuration =
@@ -27,6 +35,14 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [ ];
+
+	  # allow unfree packages e.g., vscode
+	  nixpkgs.config.allowUnfree = true;
+
+	  # overlays
+	  nixpkgs.overlays = [
+	    nix-vscode-extensions.overlays.default
+	  ];
 
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
@@ -63,8 +79,10 @@
           # Let home-manager install and manage itself.
           programs.home-manager.enable = true;
 
+
           imports = [
             ./application-config/fish/fish-config.nix # fish configuration
+	    ./application-config/vscode/vscode-config.nix # vscode configuration
           ];
 
           # universally available packages
@@ -105,12 +123,16 @@
       darwinConfigurations."Alexs-Mac-mini" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
+	  mac-app-util.darwinModules.default
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.verbose = true;
             home-manager.users.alexbielen = homeconfig;
+	    home-manager.sharedModules = [
+	      mac-app-util.homeManagerModules.default
+	    ];
           }
         ];
       };
