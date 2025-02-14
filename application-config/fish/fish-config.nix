@@ -10,6 +10,9 @@
 
       # set XDG_CONFIG_HOME
       set -x XDG_CONFIG_HOME $HOME/.config
+
+      # enable fish in nix shells
+      any-nix-shell fish --info-right | source
     '';
     plugins = [
       {

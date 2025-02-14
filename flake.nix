@@ -88,6 +88,7 @@
           # universally available packages
           home.packages = with pkgs; [
             pkgs.alacritty
+	    pkgs.any-nix-shell
             pkgs.bat
             pkgs.coreutils-prefixed
 	    pkgs.cowsay
