@@ -6,6 +6,7 @@
     userSettings = {
       # this attrset generates the settings.json file in VSCODE
       editor.formatOnSave = true;
+      workbench.colorTheme = "Nord";
     };
 
     keybindings = [
@@ -17,6 +18,7 @@
     ];
 
     extensions = with pkgs.vscode-marketplace; [
+      arcticicestudio.nord-visual-studio-code
       bmalehorn.vscode-fish
       dbaeumer.vscode-eslint
       github.copilot
