@@ -18,6 +18,7 @@
     ];
 
     extensions = with pkgs.vscode-marketplace; [
+      # ms-vscode.cpptools (this was removed?)
       arcticicestudio.nord-visual-studio-code
       bmalehorn.vscode-fish
       dbaeumer.vscode-eslint
@@ -27,10 +28,10 @@
       ms-python.debugpy
       ms-python.flake8
       ms-python.python
-      # ms-vscode.cpptools (this was removed?)
       ms-vscode.cmake-tools
       ms-vscode.cpptools-extension-pack
       rust-lang.rust-analyzer
+      vscodevim.vim
     ];
   };
 }
