@@ -88,17 +88,18 @@
           # universally available packages
           home.packages = with pkgs; [
             pkgs.alacritty
-	    pkgs.any-nix-shell
+            pkgs.any-nix-shell
             pkgs.bat
             pkgs.coreutils-prefixed
-	    pkgs.cowsay
+            pkgs.cowsay
             pkgs.fish
             pkgs.gh
             pkgs.icdiff
             pkgs.neofetch
             pkgs.neovim
             pkgs.nixfmt-rfc-style
-	    pkgs.ponysay
+            pkgs.tree
+            pkgs.ponysay
             pkgs.vim
           ];
 
