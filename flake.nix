@@ -107,10 +107,11 @@
           };
 
           home.file = {
+            ".config/alacritty/alacritty.toml".source = ./application-config/alacritty.toml;
             ".config/bat/config".source = ./application-config/bat-config;
             ".config/dircolors/.dircolors".source = ./application-config/dircolors-config;
-            ".config/alacritty/alacritty.toml".source = ./application-config/alacritty.toml;
             ".config/git/commit-template".source = ./application-config/git/commit-template;
+	    ".config/neofetch/config.conf".source = ./application-config/neofetch-config.conf;
             ".vimrc".source = ./application-config/vim-config;
           };
 
