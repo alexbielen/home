@@ -68,7 +68,7 @@
       rb = {
         description = "alias for for rebuilding the nix darwin configuration.";
         body = ''
-          	darwin-rebuild switch --flake ~/.config/nix-darwin-config/flake.nix
+          	darwin-rebuild switch --flake ~/.config/nix-darwin-config
           	'';
       };
     };
