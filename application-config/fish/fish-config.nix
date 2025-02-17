@@ -1,10 +1,11 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.fish = {
     enable = true;
 
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
-      
+
       # set tide prompt icon
       set -Ux tide_character_icon 'λ'
 
@@ -35,40 +36,40 @@
             gls -la --group-directories-first --human-readable --time-style=long-iso --color=auto $argv
           end
         '';
-         description = "a better, shorter, more colorful ls";
+        description = "a better, shorter, more colorful ls";
       };
       # astrology function
       astro = {
         body = ''
-	curl -s "https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?day=TODAY&sign="$argv  | jq ".data.horoscope_data" | cowsay
-	'';
-	description = "Enter your star sign for a daily horoscope.";
+          	curl -s "https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?day=TODAY&sign="$argv  | jq ".data.horoscope_data" | cowsay
+          	'';
+        description = "Enter your star sign for a daily horoscope.";
       };
       # config function that cds to the configuration directory
       config = {
-	description = "Quickly go to nix configuration.";
+        description = "Quickly go to nix configuration.";
         body = ''
-	  if test (count $argv) = 0
-	    # go to XDG_CONFIG_HOME
-	    cd $XDG_CONFIG_HOME/nix-darwin-config
-	  else if test $argv = "apps"
-	    cd $XDG_CONFIG_HOME/nix-darwin-config/application-config
-	  else if test $argv = "fish"
-	    cd $XDG_CONFIG_HOME/nix-darwin-config/application-config/fish
-	  else if test $argv = "git"
-	    cd $XDG_CONFIG_HOME/nix-darwin-config/application-config/git
-	  else
-	    echo "config: expects either 0 or 1 arguments."
-	    set $status 1
-	  end
-	'';
+          	  if test (count $argv) = 0
+          	    # go to XDG_CONFIG_HOME
+          	    cd $XDG_CONFIG_HOME/nix-darwin-config
+          	  else if test $argv = "apps"
+          	    cd $XDG_CONFIG_HOME/nix-darwin-config/application-config
+          	  else if test $argv = "fish"
+          	    cd $XDG_CONFIG_HOME/nix-darwin-config/application-config/fish
+          	  else if test $argv = "git"
+          	    cd $XDG_CONFIG_HOME/nix-darwin-config/application-config/git
+          	  else
+          	    echo "config: expects either 0 or 1 arguments."
+          	    set $status 1
+          	  end
+          	'';
       };
       # rb -- this is a shorthand for calling darwin-rebuild switch etc.
       rb = {
         description = "alias for for rebuilding the nix darwin configuration.";
-	body = ''
-	darwin-rebuild switch --flake ~/.config/nix-darwin-config/flake.nix
-	'';
+        body = ''
+          	darwin-rebuild switch --flake ~/.config/nix-darwin-config/flake.nix
+          	'';
       };
     };
   };
