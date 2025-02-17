@@ -24,6 +24,7 @@
       dbaeumer.vscode-eslint
       github.copilot
       github.vscode-github-actions
+      jnoortheen.nix-ide
       ms-python.black-formatter
       ms-python.debugpy
       ms-python.flake8
