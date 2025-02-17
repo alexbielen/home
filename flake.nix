@@ -29,8 +29,6 @@
       mac-app-util,
     }:
     let
-      user = "alexbielen";
-      host = "Alexs-Mac-mini";
       configuration =
         { pkgs, ... }:
         {
@@ -67,8 +65,9 @@
             pkgs.nerd-fonts.hack
           ];
 
-          users.users.${user} = {
-            home = "/Users/${user}";
+          users.users."alexbielen" = {
+            home = "/Users/alexbielen";
+            description = "alexbielen";
           };
         };
       homeconfig =
@@ -122,8 +121,8 @@
     in
     {
       # Build darwin flake using:
-      # $ darwin-rebuild build --flake
-      darwinConfigurations.${host} = nix-darwin.lib.darwinSystem {
+      # $ darwin-rebuild build --flake .#Alexs-Mac-mini
+      darwinConfigurations."Alexs-Mac-mini" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
           mac-app-util.darwinModules.default
