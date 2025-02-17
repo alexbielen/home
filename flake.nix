@@ -26,7 +26,7 @@
       nixpkgs,
       home-manager,
       nix-vscode-extensions,
-      mac-app-util
+      mac-app-util,
     }:
     let
       configuration =
@@ -36,13 +36,13 @@
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [ ];
 
-	  # allow unfree packages e.g., vscode
-	  nixpkgs.config.allowUnfree = true;
+          # allow unfree packages e.g., vscode
+          nixpkgs.config.allowUnfree = true;
 
-	  # overlays
-	  nixpkgs.overlays = [
-	    nix-vscode-extensions.overlays.default
-	  ];
+          # overlays
+          nixpkgs.overlays = [
+            nix-vscode-extensions.overlays.default
+          ];
 
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
@@ -79,10 +79,9 @@
           # Let home-manager install and manage itself.
           programs.home-manager.enable = true;
 
-
           imports = [
             ./application-config/fish/fish-config.nix # fish configuration
-	    ./application-config/vscode/vscode-config.nix # vscode configuration
+            ./application-config/vscode/vscode-config.nix # vscode configuration
           ];
 
           # universally available packages
@@ -112,7 +111,7 @@
             ".config/bat/config".source = ./application-config/bat-config;
             ".config/dircolors/.dircolors".source = ./application-config/dircolors-config;
             ".config/git/commit-template".source = ./application-config/git/commit-template;
-	    ".config/neofetch/config.conf".source = ./application-config/neofetch-config.conf;
+            ".config/neofetch/config.conf".source = ./application-config/neofetch-config.conf;
             ".vimrc".source = ./application-config/vim-config;
           };
 
@@ -126,16 +125,16 @@
       darwinConfigurations."Alexs-Mac-mini" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
-	  mac-app-util.darwinModules.default
+          mac-app-util.darwinModules.default
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.verbose = true;
             home-manager.users.alexbielen = homeconfig;
-	    home-manager.sharedModules = [
-	      mac-app-util.homeManagerModules.default
-	    ];
+            home-manager.sharedModules = [
+              mac-app-util.homeManagerModules.default
+            ];
           }
         ];
       };
