@@ -3,6 +3,9 @@
   programs.vscode = {
     enable = true;
 
+    # we don't want anything else writing to the extensions directory
+    mutableExtensionsDir = false;
+
     userSettings = {
       # this attrset generates the settings.json file in VSCODE
       editor.formatOnSave = true;
