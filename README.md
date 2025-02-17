@@ -1,5 +1,8 @@
 # Home 🏠
 
+![A view of my terminal window, showing output from neofetch including the Apple logo in ASCII art. The git command is listed below showcasing fish shell's autocomplete and documentation discovery.](./doc/screen.png)
+
+
 _"Home is where the configuration is..."_
 
 Home is a Nix-based declarative system configuration for MacOS using `nix`, `nix-darwin`, and `home-manager`. 
