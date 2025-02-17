@@ -21,7 +21,7 @@ To test that `nix` is installed run the following:
 nix (Nix) 2.24.12
 ```
 
-# Setup `~/.config` directory
+### Setup `~/.config` directory
 
 If `~/.config` doesn't exist then create it. 
 
