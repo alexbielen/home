@@ -21,6 +21,11 @@ To test that `nix` is installed run the following:
 nix (Nix) 2.24.12
 ```
 
+### Get `git` and `xcode-select` tools
+
+On a new Apple machine if you type `git` it might prompt you to automatically install `xcode-select` tools. 
+
+
 ### Setup `~/.config` directory
 
 If `~/.config` doesn't exist then create it. 
