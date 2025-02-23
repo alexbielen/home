@@ -53,6 +53,6 @@ program = "/etc/profiles/per-user/alexbielen/bin/fish"
 
 [window]
 blur = true
-decorations = "Buttonless"
+# decorations = "Buttonless"
 opacity = 0.8
 
