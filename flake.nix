@@ -92,6 +92,7 @@
             pkgs.bat
             pkgs.coreutils-prefixed
             pkgs.cowsay
+            pkgs.element-desktop
             pkgs.fish
             pkgs.gh
             pkgs.icdiff
