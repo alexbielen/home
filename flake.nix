@@ -99,6 +99,7 @@
             pkgs.neofetch
             pkgs.neovim
             pkgs.nixfmt-rfc-style
+            pkgs.ripgrep
             pkgs.tree
             pkgs.ponysay
             pkgs.vim
