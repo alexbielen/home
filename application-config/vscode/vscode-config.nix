@@ -35,6 +35,7 @@
       ms-vscode.cmake-tools
       ms-vscode.cpptools-extension-pack
       rust-lang.rust-analyzer
+      tamasfe.even-better-toml
       vscodevim.vim
     ];
   };
