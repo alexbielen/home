@@ -2,7 +2,7 @@
   description = "Alex Bielen's system configuration.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin = {
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -93,6 +93,7 @@
             pkgs.coreutils-prefixed
             pkgs.cowsay
             pkgs.element-desktop
+            pkgs.eza
             pkgs.fish
             pkgs.gh
             pkgs.icdiff
