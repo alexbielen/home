@@ -27,6 +27,7 @@
       dbaeumer.vscode-eslint
       github.copilot
       github.vscode-github-actions
+      golang.go
       jnoortheen.nix-ide
       ms-python.black-formatter
       ms-python.debugpy
