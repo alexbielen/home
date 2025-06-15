@@ -90,6 +90,7 @@
             pkgs.alacritty
             pkgs.any-nix-shell
             pkgs.bat
+            pkgs.code-cursor
             pkgs.coreutils-prefixed
             pkgs.cowsay
             pkgs.element-desktop
