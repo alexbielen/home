@@ -38,6 +38,17 @@
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [ ];
 
+          # homebrew configuration (generally try to install with nix instead)
+          homebrew = {
+            enable = true;
+            # onActivation.cleanup = "uninstall";
+            taps = [ ];
+            brews = [
+              "mariadb"
+            ];
+            casks = [ ];
+          };
+
           # allow unfree packages e.g., vscode
           nixpkgs.config.allowUnfree = true;
 
@@ -70,6 +81,8 @@
           users.users.${user} = {
             home = "/Users/${user}";
           };
+
+          system.primaryUser = user;
         };
       homeconfig =
         { pkgs, ... }:

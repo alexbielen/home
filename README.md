@@ -5,7 +5,7 @@
 
 _"Home is where the configuration is..."_
 
-Home is a Nix-based declarative system configuration for MacOS using `nix`, `nix-darwin`, and `home-manager`. 
+Home is a Nix-based declarative system configuration for MacOS using `nix`, `nix-darwin`, and `home-manager`. `nix-darwin` is used to manage `homebrew` as well.
 
 The motiviation is to have as many things as possible about my setup configured declaratively in code. 
 
@@ -29,6 +29,16 @@ nix (Nix) 2.24.12
 On a new Apple machine if you type `git` it might prompt you to automatically install `xcode-select` tools. 
 
 Note that `git` is not optional here: Nix flakes requires that all files that are referenced in a flake be checked into source control. It is sufficient to `git add` the files that are referenced in the flake. 
+
+### Install homebrew
+
+Follow the installation instructions [here](https://brew.sh).
+
+This should be something like
+
+```bash
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 ### Setup `~/.config` directory
 
