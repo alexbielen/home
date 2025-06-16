@@ -44,7 +44,10 @@
             # onActivation.cleanup = "uninstall";
             taps = [ ];
             brews = [
-              "mariadb"
+              {
+                name = "mariadb";
+                start_service = true;
+              }
             ];
             casks = [ ];
           };
