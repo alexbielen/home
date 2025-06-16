@@ -14,6 +14,9 @@
 
       # enable fish in nix shells
       any-nix-shell fish --info-right | source
+
+      # add homebrew to path
+      set -x PATH /opt/homebrew/bin $PATH
     '';
     plugins = [
       {
@@ -68,7 +71,7 @@
       rb = {
         description = "alias for for rebuilding the nix darwin configuration.";
         body = ''
-          	darwin-rebuild switch --flake ~/.config/nix-darwin-config
+          	sudo darwin-rebuild switch --flake ~/.config/nix-darwin-config
           	'';
       };
     };
