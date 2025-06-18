@@ -49,7 +49,7 @@
                 start_service = true;
               }
             ];
-            casks = [ ];
+            casks = [ "raycast" ];
           };
 
           # allow unfree packages e.g., vscode
