@@ -49,7 +49,10 @@
                 start_service = true;
               }
             ];
-            casks = [ "raycast" ];
+            casks = [
+              "raycast"
+              "karabiner-elements"
+            ];
           };
 
           # allow unfree packages e.g., vscode
