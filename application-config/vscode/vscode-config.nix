@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  programs.vscode = {
+  programs.vscode.profiles.default = {
     enable = true;
 
     # we don't want anything else writing to the extensions directory
