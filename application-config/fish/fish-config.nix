@@ -64,6 +64,8 @@
           	    cd $XDG_CONFIG_HOME/nix-darwin-config/application-config/fish
           	  else if test $argv = "git"
           	    cd $XDG_CONFIG_HOME/nix-darwin-config/application-config/git
+              else if test $argv = "vscode"
+                cd $XDG_CONFIG_HOME/nix-darwin-config/application-config/vscode
           	  else
           	    echo "config: expects either 0 or 1 arguments."
           	    set $status 1
