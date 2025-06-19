@@ -51,6 +51,7 @@
             ];
             casks = [
               "raycast"
+              "spotify"
               "karabiner-elements"
             ];
           };
