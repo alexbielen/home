@@ -17,6 +17,9 @@
 
       # add homebrew to path
       set -x PATH /opt/homebrew/bin $PATH
+
+      # alias work to cd into the repos directory
+      alias work="cd $HOME/repos"
     '';
     plugins = [
       {
