@@ -30,7 +30,7 @@
 
       keybindings = [
         {
-          key = "shift+cmd+j";
+          key = "ctrl+e";
           command = "workbench.action.focusActiveEditorGroup";
           when = "terminalFocus";
         }
@@ -38,6 +38,18 @@
         {
           key = "ctrl+t";
           command = "workbench.action.terminal.toggleTerminal";
+          when = "editorTextFocus";
+        }
+        # cycle through open editors
+        {
+          key = "ctrl+l";
+          command = "workbench.action.nextEditor";
+          when = "editorTextFocus";
+        }
+        {
+          key = "ctrl+h";
+          command = "workbench.action.previousEditor";
+          when = "editorTextFocus";
         }
       ];
 
