@@ -12,6 +12,17 @@
         # this attrset generates the settings.json file in VSCODE
         editor.formatOnSave = true;
         workbench.colorTheme = "Nord";
+
+        # make fish the default shell for macOS
+        "terminal.integrated.profiles.osx" = {
+          "fish" = {
+            "path" = "${pkgs.fish}/bin/fish";
+          };
+        };
+        "terminal.integrated.defaultProfile.osx" = "fish";
+
+        # disable auto-updates and set to manual instead to avoid the annoying popup
+        "update.mode" = "manual";
       };
 
       keybindings = [
@@ -20,6 +31,12 @@
           command = "workbench.action.focusActiveEditorGroup";
           when = "terminalFocus";
         }
+        # toggle terminal
+        {
+          key = "ctrl+t";
+          command = "workbench.action.terminal.toggleTerminal";
+        }
+
       ];
 
       # TODO: add extensions to the default profile
