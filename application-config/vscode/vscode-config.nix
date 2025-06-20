@@ -23,6 +23,9 @@
 
         # disable auto-updates and set to manual instead to avoid the annoying popup
         "update.mode" = "manual";
+
+        # disable gitlens nagging about plusFeatures
+        "gitlens.plusFeatures.enabled" = false;
       };
 
       keybindings = [
@@ -36,7 +39,6 @@
           key = "ctrl+t";
           command = "workbench.action.terminal.toggleTerminal";
         }
-
       ];
 
       # TODO: add extensions to the default profile
@@ -49,6 +51,8 @@
         github.vscode-github-actions
         golang.go
         jnoortheen.nix-ide
+        # add gitlens
+        eamodio.gitlens
         ms-python.black-formatter
         ms-python.debugpy
         ms-python.flake8
