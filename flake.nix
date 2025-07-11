@@ -136,7 +136,9 @@
             ".config/bat/config".source = ./application-config/bat-config;
             ".config/dircolors/.dircolors".source = ./application-config/dircolors-config;
             ".config/git/commit-template".source = ./application-config/git/commit-template;
+            ".config/karabiner/karabiner.json".source = ./application-config/karabiner.json;
             ".config/neofetch/config.conf".source = ./application-config/neofetch-config.conf;
+
             ".vimrc".source = ./application-config/vim-config;
           };
 
