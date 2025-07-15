@@ -82,7 +82,7 @@
       fish_user_key_bindings = {
         description = "fish user key bindings -- binds tab to forward-right and ctrl-f to completion";
         body = ''
-          bind tab forward-word
+          bind tab forward-char
           bind \cf complete
         '';
       };
