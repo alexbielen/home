@@ -26,6 +26,12 @@
 
         # disable gitlens nagging about plusFeatures
         "gitlens.plusFeatures.enabled" = false;
+
+        # disable auto-closing brackets, etc.
+        "editor.autoClosingBrackets" = "never";
+        "editor.autoClosingDelete" = "never";
+        "editor.autoClosingOvertype" = "never";
+        "editor.autoClosingQuotes" = "never";
       };
 
       keybindings = [
