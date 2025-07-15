@@ -16,48 +16,18 @@
                 },
                 {
                     "from": {
-                        "key_code": "left_option"
+                        "key_code": "insert"
                     },
                     "to": [
                         {
-                            "key_code": "left_command"
+                            "key_code": "right_arrow"
                         }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "right_option"
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_command"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "left_command"
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_option"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "right_command"
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_option"
-                        }
-                    ]
+                    ],
+                    "virtual_hid_keyboard": {
+                        "keyboard_type_v2": "ansi"
+                    }
                 }
-            ],
-            "virtual_hid_keyboard": {
-                "keyboard_type_v2": "ansi"
-            }
+            ]
         }
     ]
 }

@@ -79,6 +79,13 @@
           	sudo darwin-rebuild switch --flake ~/.config/nix-darwin-config
           	'';
       };
+      fish_user_key_bindings = {
+        description = "fish user key bindings -- binds tab to forward-right and ctrl-f to completion";
+        body = ''
+          bind tab forward-word
+          bind \cf complete
+        '';
+      };
     };
   };
 }
