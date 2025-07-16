@@ -30,7 +30,6 @@
         # disable auto-closing brackets, etc.
         "editor.autoClosingBrackets" = "never";
         "editor.autoClosingDelete" = "never";
-        "editor.autoClosingOvertype" = "never";
         "editor.autoClosingQuotes" = "never";
       };
 
@@ -56,6 +55,18 @@
           key = "ctrl+h";
           command = "workbench.action.previousEditor";
           when = "editorTextFocus";
+        }
+
+        # add keybindings for navigating the completion list
+        {
+          key = "ctrl+k";
+          command = "selectNextSuggestion";
+          when = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion";
+        }
+        {
+          key = "ctrl+j";
+          command = "selectPrevSuggestion";
+          when = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && suggestWidgetHasFocusedSuggestion";
         }
       ];
 
