@@ -79,6 +79,15 @@
           	sudo darwin-rebuild switch --flake ~/.config/nix-darwin-config
           	'';
       };
+      # gitignore function -- append the output of the api call to the .gitignore file
+      gi = {
+        description = "generate a gitignore for the current directory and add it to the current directory.";
+        body = ''
+          curl -sL https://toptal.com/developers/gitignore/api/$argv >> .gitignore
+          set $status 0
+        '';
+      };
+
       fish_user_key_bindings = {
         description = "fish user key bindings -- binds tab to forward-right and ctrl-f to completion";
         body = ''
