@@ -88,6 +88,21 @@
         '';
       };
 
+      # nf -- calls nix flake --init or nix develop and then gets the appropriate flake.nix from my flake repo
+      nf = {
+        description = "calls nix flake --init or nix develop and then gets the appropriate flake.nix from my flake repo";
+        body = ''
+          if test (count $argv) = 0
+            echo "nf: expects 2 arguments."
+          else if test $argv[1] = "d"
+            nix develop github:alexbielen/flakes/main?dir=shells/$argv[2]
+          else if test $argv[1] = "i"
+            nix flake init --template github:alexbielen/flakes#$argv[2] --refresh
+          else
+            echo "nf: expects a flake name."
+          end
+        '';
+      };
       fish_user_key_bindings = {
         description = "fish user key bindings -- binds tab to forward-right and ctrl-f to completion";
         body = ''
