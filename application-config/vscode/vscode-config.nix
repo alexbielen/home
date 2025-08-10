@@ -76,21 +76,25 @@
         arcticicestudio.nord-visual-studio-code
         bmalehorn.vscode-fish
         dbaeumer.vscode-eslint
+        esbenp.prettier-vscode
+        figma.figma-vscode-extension
         github.copilot
         github.vscode-github-actions
         golang.go
         jnoortheen.nix-ide
-        # add gitlens
         eamodio.gitlens
         ms-python.black-formatter
         ms-python.debugpy
         ms-python.flake8
+        ms-playwright.playwright
         ms-python.python
         ms-vscode.cmake-tools
         ms-vscode.cpptools-extension-pack
         rust-lang.rust-analyzer
         tamasfe.even-better-toml
         vscodevim.vim
+        vitest.explorer
+        vue.volar
       ];
     };
   };
