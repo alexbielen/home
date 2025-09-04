@@ -45,21 +45,57 @@ in
   # Enable alternative shell support in nix-darwin.
   programs.fish.enable = true;
 
-  # Set Git commit hash for darwin-version.
-  system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
-
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
-  system.stateVersion = 6;
-
   # fonts
   fonts.packages = [
     pkgs.nerd-fonts.hack
   ];
 
+  system = {
+    configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
+    # Used for backwards compatibility, please read the changelog before changing.
+    # $ darwin-rebuild changelog
+    stateVersion = 6;
+    primaryUser = user;
+    defaults = {
+      LaunchServices = {
+        LSQuarantine = false;
+      };
+      NSGlobalDomain = {
+        AppleShowAllExtensions = true;
+        ApplePressAndHoldEnabled = false;
+
+        # 120, 90, 60, 30, 12, 6, 2
+        KeyRepeat = 2;
+
+        # 120, 94, 68, 35, 25, 15
+        InitialKeyRepeat = 15;
+        "com.apple.mouse.tapBehavior" = 1;
+        "com.apple.sound.beep.volume" = 0.0;
+        "com.apple.sound.beep.feedback" = 0;
+      };
+      dock = {
+        autohide = false;
+        show-recents = false;
+        launchanim = true;
+        mouse-over-hilite-stack = true;
+        orientation = "bottom";
+        tilesize = 48;
+      };
+      finder = {
+        _FXShowPosixPathInTitle = false;
+      };
+      trackpad = {
+        Clicking = true;
+        TrackpadThreeFingerDrag = true;
+      };
+    };
+  };
+
+  security.pam.services.sudo_local.touchIdAuth = true;
+
+  # users
   users.users.${user} = {
     home = "/Users/${user}";
   };
 
-  system.primaryUser = user;
 }
