@@ -32,9 +32,25 @@ in
       }
     ];
     casks = [
+      # development
+      "docker"
+
+      # browsers
+      "google-chrome"
+      "firefox"
+
+      # communication
+      "slack"
+      "zoom"
+
+      # utility
+      "1password"
       "raycast"
-      "spotify"
       "karabiner-elements"
+
+      # entertainment
+      "spotify"
+      "vlc"
     ];
   };
 
