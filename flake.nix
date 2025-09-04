@@ -88,8 +88,6 @@
           system.primaryUser = user;
         };
 
-      homeconfig = import ./modules/home-manager/default.nix;
-
       darwinSystem = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
@@ -100,7 +98,11 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.verbose = true;
-            home-manager.users.${user} = homeconfig;
+            home-manager.users.${user} = {
+              imports = [
+                ./modules/homeconfig
+              ];
+            };
             home-manager.sharedModules = [
               mac-app-util.homeManagerModules.default
             ];
@@ -112,7 +114,10 @@
       # Build darwin flake using:
       # $ darwin-rebuild build --flake
       darwinConfigurations = {
+        # Mac Mini
+        uncool = darwinSystem;
 
+        # M4 Macbook Pro
         campfire = darwinSystem;
       };
     };
