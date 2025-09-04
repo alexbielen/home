@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   # this is internal compatibility configuration
   # for home-manager, don't change this!
@@ -39,13 +44,15 @@
   };
 
   home.file = {
-    ".config/alacritty/alacritty.toml".source = ./application-config/alacritty.toml;
-    ".config/bat/config".source = ./application-config/bat-config;
-    ".config/dircolors/.dircolors".source = ./application-config/dircolors-config;
+    # XDG Base Directory dotfiles
+    ".config/alacritty/alacritty.toml".source = ./application-config/dotfiles/alacritty.toml;
+    ".config/bat/config".source = ./application-config/dotfiles/bat-config;
+    ".config/dircolors/.dircolors".source = ./application-config/dotfiles/dircolors-config;
     ".config/git/commit-template".source = ./application-config/git/commit-template;
-    ".config/karabiner/karabiner.json".source = ./application-config/karabiner.json;
-    ".config/neofetch/config.conf".source = ./application-config/neofetch-config.conf;
+    ".config/karabiner/karabiner.json".source = ./application-config/dotfiles/karabiner.json;
+    ".config/neofetch/config.conf".source = ./application-config/dotfiles/neofetch-config.conf;
 
-    ".vimrc".source = ./application-config/vim-config;
+    # user-level dotfiles
+    ".vimrc".source = ./application-config/dotfiles/vim-config;
   };
 }
