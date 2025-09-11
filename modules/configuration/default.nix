@@ -9,8 +9,7 @@ let
   inputs = config._module.args.inputs or { };
 in
 {
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
+  # I'm currently running this as a single user system so this is empty.
   environment.systemPackages = [ ];
 
   # nixpkgs configuration
@@ -21,38 +20,7 @@ in
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   # homebrew configuration (generally try to install with nix instead)
-  homebrew = {
-    enable = true;
-    # onActivation.cleanup = "uninstall";
-    taps = [ ];
-    brews = [
-      {
-        name = "mariadb";
-        start_service = true;
-      }
-    ];
-    casks = [
-      # development
-      "docker"
-
-      # browsers
-      "google-chrome"
-      "firefox"
-
-      # communication
-      "slack"
-      "zoom"
-
-      # utility
-      "1password"
-      "raycast"
-      "karabiner-elements"
-
-      # entertainment
-      "spotify"
-      "vlc"
-    ];
-  };
+  homebrew = import ./homebrew.nix;
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
