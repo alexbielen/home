@@ -45,8 +45,20 @@ in
         LSQuarantine = false;
       };
       NSGlobalDomain = {
+
+        # Show all extensions in Finder
         AppleShowAllExtensions = true;
+        # Disable press and hold to enable key repeat
         ApplePressAndHoldEnabled = false;
+        # Automatically switch to dark mode based on time of day
+        AppleInterfaceStyleSwitchesAutomatically = true;
+        # This disables the default behavior of switching to the
+        # workspace with the active window of application.
+        AppleSpacesSwitchOnActivate = false;
+        # Show the expanded save panel
+        NSNavPanelExpandedStateForSaveMode = true;
+        # Draggable windows
+        NSWindowShouldDragOnGesture = true;
 
         # 120, 90, 60, 30, 12, 6, 2
         KeyRepeat = 2;
@@ -64,6 +76,7 @@ in
         mouse-over-hilite-stack = true;
         orientation = "bottom";
         tilesize = 48;
+        mru-spaces = false;
       };
       finder = {
         _FXShowPosixPathInTitle = false;
