@@ -39,6 +39,12 @@ in
     # Used for backwards compatibility, please read the changelog before changing.
     # $ darwin-rebuild changelog
     stateVersion = 6;
+
+    # This runs after activation (darwin-rebuild switch) and applies settings immediately.
+    # Otherwise we would need to logout/login or restart the system to apply the settings.
+    system.activationScripts.postUserActivation.text = ''
+      /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    '';
     primaryUser = user;
     defaults = {
       LaunchServices = {
