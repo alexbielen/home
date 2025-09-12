@@ -42,6 +42,7 @@ in
 
     # This runs after activation (darwin-rebuild switch) and applies settings immediately.
     # Otherwise we would need to logout/login or restart the system to apply the settings.
+    # h/t https://medium.com/@zmre/nix-darwin-quick-tip-activate-your-preferences-f69942a93236
     system.activationScripts.postUserActivation.text = ''
       /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
     '';
