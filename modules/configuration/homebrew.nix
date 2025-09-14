@@ -1,7 +1,7 @@
 # homebrew configuration (generally try to install with nix instead)
 {
   enable = true;
-  # onActivation.cleanup = "uninstall";
+  onActivation.cleanup = "uninstall";
   taps = [ "deskflow/homebrew-tap" ];
   brews = [
     {
@@ -29,8 +29,9 @@
 
     # utility
     "1password"
-    "raycast"
+    "deskflow"
     "karabiner-elements"
+    "raycast"
 
     # entertainment
     "spotify"
