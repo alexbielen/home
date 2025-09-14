@@ -8,6 +8,7 @@
       name = "mariadb";
       start_service = true;
     }
+
   ];
   casks = [
     # development
@@ -30,7 +31,6 @@
     "1password"
     "raycast"
     "karabiner-elements"
-    "deskflow"
 
     # entertainment
     "spotify"
