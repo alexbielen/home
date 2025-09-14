@@ -2,7 +2,7 @@
 {
   enable = true;
   # onActivation.cleanup = "uninstall";
-  taps = [ ];
+  taps = [ "deskflow/homebrew-tap" ];
   brews = [
     {
       name = "mariadb";
@@ -27,6 +27,7 @@
     "1password"
     "raycast"
     "karabiner-elements"
+    "deskflow"
 
     # entertainment
     "spotify"
