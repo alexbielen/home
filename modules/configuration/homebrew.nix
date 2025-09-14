@@ -17,6 +17,9 @@
     "google-chrome"
     "firefox"
 
+    # display management
+    "betterdisplay"
+
     # communication
     "slack"
     "zoom"
