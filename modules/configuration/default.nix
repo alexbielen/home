@@ -84,6 +84,29 @@ in
         orientation = "bottom";
         tilesize = 48;
         mru-spaces = false;
+        persistent-apps = [
+          {
+            app = "/Applications/Firefox.app";
+          }
+          {
+            app = "/Applications/Safari.app";
+          }
+          {
+            app = "/Applications/Google Chrome.app";
+          }
+          {
+            app = "${pkgs.vscode-with-extensions}/Applications/Visual Studio Code.app";
+          }
+          {
+            app = "${pkgs.code-cursor}/Applications/Cursor.app";
+          }
+          {
+            app = "${pkgs.alacritty}/Applications/Alacritty.app";
+          }
+          {
+            app = "/Applications/Slack.app";
+          }
+        ];
       };
       finder = {
         _FXShowPosixPathInTitle = false;
