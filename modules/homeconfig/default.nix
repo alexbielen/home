@@ -29,6 +29,7 @@
     alacritty
     any-nix-shell
     fish
+    starship
 
     # GUI tools
     element-desktop
@@ -59,6 +60,7 @@
     # utilities
     coreutils-prefixed
     neofetch
+    blueutil
 
     # networking
     nmap
@@ -87,6 +89,7 @@
     ".config/git/commit-template".source = ./application-config/git/commit-template;
     ".config/karabiner/karabiner.json".source = ./application-config/dotfiles/karabiner.json;
     ".config/neofetch/config.conf".source = ./application-config/dotfiles/neofetch-config.conf;
+    ".config/starship.toml".source = ./application-config/dotfiles/starship.toml;
 
     # user-level dotfiles
     ".vimrc".source = ./application-config/dotfiles/vim-config;
