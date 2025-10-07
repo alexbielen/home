@@ -30,6 +30,7 @@
     any-nix-shell
     fish
     starship
+    direnv
 
     # GUI tools
     element-desktop

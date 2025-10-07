@@ -99,6 +99,24 @@
           end
         '';
       };
+      tp = {
+        description = "pairs Apple Magic Trackpad to machine";
+        body = ''
+          set -l trackpadAddress (blueutil --paired | grep "Alex's Trackpad" | awk '{print substr($2, 1, length($2)-1)}')
+          if test -z $trackpadAddress
+            echo "No paired device found -- manually pair the device."
+            return 1
+          end
+          set -l connected (blueutil --is-connected $trackpadAddress)
+          if test $connected = 1
+            echo "Trackpad is already paired."
+          else
+            blueutil --connect $trackpadAddress
+            echo "Trackpad paired and connected."
+          end
+        '';
+      };
+
       fish_user_key_bindings = {
         description = "fish user key bindings -- binds tab to forward-right and ctrl-f to completion";
         body = ''
