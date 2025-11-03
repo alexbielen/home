@@ -88,15 +88,7 @@
       nf = {
         description = "calls nix flake --init or nix develop and then gets the appropriate flake.nix from my flake repo";
         body = ''
-          if test (count $argv) = 0
-            echo "nf: expects 2 arguments."
-          else if test $argv[1] = "d"
-            nix develop github:alexbielen/flakes/main?dir=shells/$argv[2]
-          else if test $argv[1] = "i"
-            nix flake init --template github:alexbielen/flakes#$argv[2] --refresh
-          else
-            echo "nf: expects a flake name."
-          end
+          nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#$argv"
         '';
       };
       tp = {
