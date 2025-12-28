@@ -62,6 +62,7 @@
     coreutils-prefixed
     neofetch
     blueutil
+    ffmpeg
 
     # networking
     nmap
