@@ -7,10 +7,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "Alex Bielen";
-    userEmail = "alexhendriebielen@gmail.com";
-    ignores = [ ".DS_Store" ];
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Alex Bielen";
+        email = "alexhendriebielen@gmail.com";
+      };
       core = {
         pager = "bat";
         editor = "nvim";
@@ -24,6 +25,8 @@
       push = {
         autoSetupRemote = true;
       };
+      };
     };
+    ignores = [ ".DS_Store" ];
   };
 }
