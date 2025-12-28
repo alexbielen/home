@@ -25,7 +25,6 @@
       push = {
         autoSetupRemote = true;
       };
-      };
     };
     ignores = [ ".DS_Store" ];
   };
