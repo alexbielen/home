@@ -12,7 +12,7 @@
   ];
   casks = [
     # development
-    "docker"
+    "docker-desktop"
 
     # browsers
     "google-chrome"
@@ -25,7 +25,6 @@
     "slack"
     "zoom"
     "signal"
-    "microsoft-teams"
 
     # utility
     "1password"
