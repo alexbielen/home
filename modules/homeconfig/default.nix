@@ -43,6 +43,7 @@
     # version control
     gh
     git
+    git-credential-manager
     icdiff
 
     # performance and system monitoring
