@@ -67,6 +67,9 @@ in
         # Draggable windows
         NSWindowShouldDragOnGesture = true;
 
+        # Trackpad sensitivity
+        "com.apple.trackpad.scaling" = 3.0;
+
         # 120, 90, 60, 30, 12, 6, 2
         KeyRepeat = 2;
 
