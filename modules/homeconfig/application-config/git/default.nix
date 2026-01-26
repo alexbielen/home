@@ -16,6 +16,9 @@
         pager = "bat";
         editor = "nvim";
       };
+      credential = {
+        helper = "git-credential-manager";
+      };
       commit = {
         template = "~/.config/git/commit-template";
       };
