@@ -15,6 +15,7 @@
     ./application-config/fish # fish configuration
     ./application-config/vscode # vscode configuration
     ./application-config/git # git configuration
+    ./application-config/ssh # ssh configuration
   ];
 
   # universally available packages
@@ -23,6 +24,7 @@
     age
     age-plugin-yubikey
     gnupg
+    openssh
     libfido2
 
     # terminal emulator and shell
@@ -70,7 +72,6 @@
     wireguard-tools
     wget
     dig
-    openssh
     zip
 
     # entertainment
