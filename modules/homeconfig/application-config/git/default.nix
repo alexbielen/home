@@ -21,6 +21,7 @@
       };
       commit = {
         template = "~/.config/git/commit-template";
+        gpgSign = true;
       };
       init = {
         defaultBranch = "main";
