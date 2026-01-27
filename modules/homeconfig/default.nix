@@ -25,6 +25,7 @@
     age-plugin-yubikey
     gnupg
     openssh
+    yubikey-manager
     libfido2
 
     # terminal emulator and shell
