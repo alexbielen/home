@@ -80,6 +80,7 @@
         # ms-vscode.cpptools (this was removed?)
         arcticicestudio.nord-visual-studio-code
         bmalehorn.vscode-fish
+        charliermarsh.ruff
         dbaeumer.vscode-eslint
         esbenp.prettier-vscode
         figma.figma-vscode-extension
