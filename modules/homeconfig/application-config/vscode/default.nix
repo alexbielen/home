@@ -86,6 +86,7 @@
         figma.figma-vscode-extension
         github.copilot
         github.vscode-github-actions
+        goessner.mdmath
         golang.go
         jnoortheen.nix-ide
         eamodio.gitlens
