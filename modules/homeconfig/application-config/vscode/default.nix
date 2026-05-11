@@ -99,7 +99,6 @@
         ms-vscode.cpptools-extension-pack
         rust-lang.rust-analyzer
         tamasfe.even-better-toml
-        vadimcn.vscode-lldb
         vscodevim.vim
         vitest.explorer
         vue.volar
