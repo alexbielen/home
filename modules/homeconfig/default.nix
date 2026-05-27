@@ -64,7 +64,7 @@
 
     # utilities
     coreutils-prefixed
-    neofetch
+    fastfetch
     blueutil
     ffmpeg
 
